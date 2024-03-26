@@ -9,7 +9,7 @@ import (
 func main() {
 	router := http.NewServeMux()
 
-	router.HandleFunc("/", home)
+	router.HandleFunc("GET /", home)
 
 	server := http.Server{
 		Addr:    ":8080",
