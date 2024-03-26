@@ -4,7 +4,7 @@ This repository explores the usage of context and concurrency in GoLang.
 <br>
 The examples demonstrate practical applications of context and concurrency management.
 
-Two main scenarios are covered:
+Three main scenarios are covered:
 
 ## 1. Using `context.WithCancel`
 
@@ -18,7 +18,7 @@ To run the booking process, execute the following command:
 go run booking/main.go
 ```
 
-## 2. Utilizing `http.Request.Context`
+## 2. Using `http.Request.Context`
 
 ### Server Operations
 
@@ -35,3 +35,17 @@ To test this server as a client, use the following command:
 ```bash
 curl localhost:8080
 ```
+
+## 3. Using `context.WithTimeout`
+
+### Client Request with Timeout
+
+This example demonstrates a client application utilizing context with a timeout to enforce a request failure if the context deadline is exceeded.
+
+To run this client example, execute the following command:
+
+```bash
+go run client/main.go
+```
+
+For a comprehensive demonstration, run this client alongside the `server/main.go`. This setup will illustrate the expected results for each side, showcasing the timeout behavior and its impact on request handling.
