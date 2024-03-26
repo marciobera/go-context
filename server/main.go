@@ -7,8 +7,15 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", home)
-	http.ListenAndServe(":8080", nil)
+	router := http.NewServeMux()
+	router.HandleFunc("/", home)
+
+	server := http.Server{
+		Addr:    ":8080",
+		Handler: router,
+	}
+	log.Println("Starting server on port :8080")
+	server.ListenAndServe()
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
