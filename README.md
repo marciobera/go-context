@@ -4,6 +4,8 @@ This repository explores the usage of context and concurrency in GoLang.
 <br>
 The examples demonstrate practical applications of context and concurrency management.
 
+> Make sure that you have installed go 1.22.1 or higher to run these examples.
+
 Three main scenarios are covered:
 
 ## 1. Using `context.WithCancel`
