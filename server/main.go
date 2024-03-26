@@ -8,6 +8,7 @@ import (
 
 func main() {
 	router := http.NewServeMux()
+
 	router.HandleFunc("/", home)
 
 	server := http.Server{
