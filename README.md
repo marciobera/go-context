@@ -1,12 +1,10 @@
-# Context and Concurrency Exploration in Go
+# Go Routines Explorations
 
-This repository explores the usage of context and concurrency in GoLang.
+This repository explores the usage of go routines in GoLang.
 <br>
-The examples demonstrate practical applications of context and concurrency management.
+The examples demonstrate practical applications using channels, context and concurrency management.
 
 > Make sure that you have installed go 1.22.1 or higher to run these examples.
-
-Three main scenarios are covered:
 
 ## 1. Using `context.WithCancel`
 
@@ -51,3 +49,15 @@ go run client/main.go
 ```
 
 For a comprehensive demonstration, run this client alongside the `server/main.go`. This setup will illustrate the expected results for each side, showcasing the timeout behavior and its impact on request handling.
+
+## 4. Using `chan` and `sync.WaitGroup`
+
+### Parallel tasks
+
+This example demonstrates a execution of parallel tasks utilizing channels and waiting groups.
+
+To run this client example, execute the following command:
+
+```bash
+go run channel/main.go
+```
